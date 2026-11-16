@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 
 import 'widgets/dashboard_metricas.dart';
 import 'widgets/cartao_perfil.dart';
-import 'widgets/secao_habilidades.dart';
-import 'widgets/secao_projetos.dart';
 
 void main() {
   runApp(const DevFolioApp());
@@ -18,7 +16,6 @@ class DevFolioApp extends StatelessWidget {
     return MaterialApp(
       title: 'DevFolio App',
       debugShowCheckedModeBanner: false,
-
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
@@ -27,7 +24,6 @@ class DevFolioApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: const Color(0xFFF5F6FA),
       ),
-
       home: const TelaInicial(),
     );
   }
@@ -49,13 +45,10 @@ class TelaInicial extends StatelessWidget {
             SizedBox(width: 10),
             Text(
               'DevFolio',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-              ),
+              style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ],
         ),
-
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20),
@@ -66,9 +59,7 @@ class TelaInicial extends StatelessWidget {
                   color: Colors.green,
                   size: 10,
                 ),
-                label: const Text(
-                  'Disponível para projetos',
-                ),
+                label: const Text('Disponível para projetos'),
                 backgroundColor: Colors.white,
                 side: BorderSide.none,
               ),
@@ -76,7 +67,6 @@ class TelaInicial extends StatelessWidget {
           ),
         ],
       ),
-
       body: SafeArea(
         child: LayoutBuilder(
           builder: (context, constraints) {
@@ -87,13 +77,9 @@ class TelaInicial extends StatelessWidget {
 
             return SingleChildScrollView(
               padding: EdgeInsets.all(padding),
-
               child: Center(
                 child: ConstrainedBox(
-                  constraints: const BoxConstraints(
-                    maxWidth: 1150,
-                  ),
-
+                  constraints: const BoxConstraints(maxWidth: 1150),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -172,6 +158,96 @@ class TelaInicial extends StatelessWidget {
           },
         ),
       ),
+    );
+  }
+}
+
+// SEÇÃO DE HABILIDADES
+
+class SecaoHabilidades extends StatelessWidget {
+  const SecaoHabilidades({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final habilidades = [
+      'Flutter',
+      'Dart',
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'Banco de Dados',
+    ];
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          'Minhas habilidades',
+          style: TextStyle(
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+            color: Color(0xFF20233A),
+          ),
+        ),
+        const SizedBox(height: 16),
+        Wrap(
+          spacing: 10,
+          runSpacing: 10,
+          children: habilidades.map((habilidade) {
+            return Chip(
+              label: Text(habilidade),
+              backgroundColor: Colors.white,
+              side: BorderSide(
+                color: Colors.grey.shade300,
+              ),
+            );
+          }).toList(),
+        ),
+      ],
+    );
+  }
+}
+
+// SEÇÃO DE PROJETOS
+
+class SecaoProjetos extends StatelessWidget {
+  const SecaoProjetos({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          'Meus projetos',
+          style: TextStyle(
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+            color: Color(0xFF20233A),
+          ),
+        ),
+        const SizedBox(height: 16),
+        Card(
+          color: Colors.white,
+          elevation: 1,
+          child: ListTile(
+            leading: const CircleAvatar(
+              backgroundColor: Color(0xFFE9E9FF),
+              child: Icon(
+                Icons.code,
+                color: Color(0xFF5B5FEF),
+              ),
+            ),
+            title: const Text(
+              'DevFolio',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            subtitle: const Text(
+              'Aplicativo de portfólio desenvolvido com Flutter.',
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

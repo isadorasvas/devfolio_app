@@ -35,7 +35,7 @@ class CartaoPerfil extends StatelessWidget {
                 const SizedBox(height: 8),
 
                 const Text(
-                  'Seu Nome',
+                  'Stella ',
                   style: TextStyle(
                     fontSize: 28,
                     fontWeight: FontWeight.bold,
