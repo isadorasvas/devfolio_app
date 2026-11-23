@@ -23,7 +23,7 @@ class CartaoPerfil extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  'OLÁ, EU SOU',
+                  'OLÁ, SOMOS',
                   style: TextStyle(
                     color: Color(0xFF5B5FEF),
                     fontWeight: FontWeight.bold,
@@ -35,7 +35,7 @@ class CartaoPerfil extends StatelessWidget {
                 const SizedBox(height: 8),
 
                 const Text(
-                  'Stella ',
+                  'Stella e Isadora ',
                   style: TextStyle(
                     fontSize: 28,
                     fontWeight: FontWeight.bold,
@@ -46,7 +46,7 @@ class CartaoPerfil extends StatelessWidget {
                 const SizedBox(height: 6),
 
                 const Text(
-                  'Estudante de Desenvolvimento de Sistemas',
+                  'Estudantes de Desenvolvimento de Sistemas',
                   style: TextStyle(
                     fontSize: 16,
                     color: Color(0xFF555B70),
@@ -57,8 +57,8 @@ class CartaoPerfil extends StatelessWidget {
                 const SizedBox(height: 14),
 
                 const Text(
-                  'Sou estudante e estou desenvolvendo minhas habilidades em programação. '
-                  'Gosto de aprender novas tecnologias e transformar ideias em projetos.',
+                  'Somos estudantes e estamos desenvolvendo habilidades em programação. '
+                  'Gostamos de aprender novas tecnologias e transformar ideias em projetos.',
                   style: TextStyle(
                     fontSize: 14,
                     height: 1.6,
