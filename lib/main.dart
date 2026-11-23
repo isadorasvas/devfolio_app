@@ -84,7 +84,7 @@ class TelaInicial extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        'Meu portfólio',
+                        'Nosso portfólio',
                         style: TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.bold,
@@ -95,7 +95,7 @@ class TelaInicial extends StatelessWidget {
                       const SizedBox(height: 8),
 
                       const Text(
-                        'Conheça um pouco sobre mim, minhas habilidades e meus projetos.',
+                        'Conheça um pouco sobre nós, nossas habilidades e nossos projetos.',
                         style: TextStyle(
                           fontSize: 15,
                           color: Color(0xFF62677B),
@@ -120,7 +120,7 @@ class TelaInicial extends StatelessWidget {
                       const SizedBox(height: 8),
 
                       const Text(
-                        'Resumo da minha jornada como desenvolvedor(a).',
+                        'Resumo de nossas jornadas como desenvolvedoras.',
                         style: TextStyle(
                           color: Color(0xFF62677B),
                         ),
@@ -182,7 +182,7 @@ class SecaoHabilidades extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Text(
-          'Minhas habilidades',
+          'Nossas habilidades',
           style: TextStyle(
             fontSize: 22,
             fontWeight: FontWeight.bold,
@@ -219,7 +219,7 @@ class SecaoProjetos extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Text(
-          'Meus projetos',
+          'Nossos projetos',
           style: TextStyle(
             fontSize: 22,
             fontWeight: FontWeight.bold,
